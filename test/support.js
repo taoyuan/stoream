@@ -1,10 +1,9 @@
 "use strict";
 
-var Readable = require('stream').Readable;
-var Writable = require('stream').Writable;
+var stream = require('stream');
 
 exports.readable = function (read) {
-    var r = new Readable();
+    var r = new stream.Readable();
     r._read = function () {
         if (read) {
             read.call(this);
@@ -14,7 +13,7 @@ exports.readable = function (read) {
 };
 
 exports.writable = function (write) {
-    var w = new Writable();
+    var w = new stream.Writable();
     w._write = function (chunk, enc, next) {
         if (write) {
             if (write.length < 3) {
