@@ -23,8 +23,8 @@
   },
   "homepage": "https://github.com/taoyuan/stoream",
   "devDependencies": {
-    "async": "^0.9.0",
-    "chai": "^1.9.1",
-    "mocha": "^1.19.0"
+    "async": "^3.1.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0"
   }
 }
